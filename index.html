@@ -34,7 +34,8 @@
 <script type="text/javascript" src="./js/constants.js">
 
 document.addEventListener("DOMContentLoaded", function() { 
-    // this function runs when the DOM is ready, i.e. when the document has been parsed
+    console.log('did run event listener');
+	// this function runs when the DOM is ready, i.e. when the document has been parsed
     var classList = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"];
 
 	var obj = document.getElementById("charClassInput1");
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		obj.options[obj.options.length] = new Option(classList[index], index);
 	}
 });
-
-
 </script>
+
 </html>
