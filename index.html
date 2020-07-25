@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html>
-<div>
-  <div>
-	<div>
-	  <label>Class(es)</label>
-	  <select id="charClassInput1">
-	  <select id="charClassInput2">
-	  <select id="charClassInput3">
-	</div>
-  </div>
-  
-  <br>
-  
-  <div>
-	<div>
-	  <label>1</label>
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="1c1" placeholder="...">
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="1c2" placeholder="...">
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="1c3" placeholder="...">
-	</div>
-  </div>
-
-  <div>
-	<div>
-	  <label>2</label>
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="2c1" placeholder="...">
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="2c2" placeholder="...">
-	  <input type="text" pattern="Monk|Paladin|Rogue" id="2c3" placeholder="...">
-	</div>
-  </div>
-
-</div>
-
-<script type="text/javascript" src="./js/constants.js">
-console.log('script started');
-
-document.addEventListener("DOMContentLoaded", function() { 
-    console.log('did run event listener');
-	// this function runs when the DOM is ready, i.e. when the document has been parsed
-    var classList = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"];
-
-	var obj = document.getElementById("charClassInput1");
-	for(var i = 0; i<classList.length; i++) {
-		obj.options[obj.options.length] = new Option(classList[index], index);
-	}
-});
-</script>
-
+    <head>
+        <title>test</title>
+        <script type="text/javascript">
+            alert("this works");
+        </script>
+    </head>
+    <body>
+    </body>
 </html>
