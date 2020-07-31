@@ -17,16 +17,19 @@
 		var select1 = document.getElementById("charClassInput1"); 
 		var select2 = document.getElementById("charClassInput2"); 
 		var select3 = document.getElementById("charClassInput3"); 
-		var options = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"]; 
-		for(var i = 0; i < options.length; i++){
+		var options = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"];
+		function populateDropdown(dropdown_obj, options){
+			for(var i = 0; i < options.length; i++){
 			var opt = options[i];
 			var el = document.createElement("option");
 			el.textContent = opt;
 			el.value = opt;
-			select1.appendChild(el);
-			select2.appendChild(el);
-			select3.appendChild(el);
+			dropdown_obj.appendChild(el);
+			}
 		}
+		populateDropdown(select1, options)
+		populateDropdown(select2, options)
+		populateDropdown(select3, options)
 	</script>
   
     </body>
