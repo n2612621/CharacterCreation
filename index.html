@@ -7,27 +7,13 @@
 	<body>
 	
 	<div>
-		<p>16</p>
-		<label>Class(es)</label>
-		<select id="charClassInput1">
-		<select id="charClassInput2">
-		<select id="charClassInput3">
+		<select id="language"><option disabled selected value> -- Class -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		<select id="language2"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		<select id="language3"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
 	</div>
-	<script type="text/javascript">
-		function populateDropdown(dropdown_obj, options){
-			for(var i = 0; i < options.length; i++){
-				var opt = options[i];
-				var el = document.createElement("option");
-				el.textContent = opt;
-				el.value = opt;
-				dropdown_obj.appendChild(el);
-			}
-		}
-		var options = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"];
-		populateDropdown(document.getElementById("charClassInput1"), options);
-		populateDropdown(document.getElementById("charClassInput2"), options);
-		populateDropdown(document.getElementById("charClassInput3"), options);
-	</script>
+
   
+
+	
     </body>
 </html>
