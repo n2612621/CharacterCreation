@@ -7,7 +7,7 @@
 	<body>
 	
 	<div>
-		<p>14</p>
+		<p>15</p>
 		<label>Class(es)</label>
 		<select id="charClassInput1">
 		<select id="charClassInput2">
@@ -16,17 +16,17 @@
 	<script type="text/javascript">
 		function populateDropdown(dropdown_obj, options){
 			for(var i = 0; i < options.length; i++){
-			var opt = options[i];
-			var el = document.createElement("option");
-			el.textContent = opt;
-			el.value = opt;
-			dropdown_obj.appendChild(el);
+				var opt = options[i];
+				var el = document.createElement("option");
+				el.textContent = opt;
+				el.value = opt;
+				dropdown_obj.appendChild(el);
 			}
 		}
 		var options = ["Barbarian", "Bard", "Cleric", "Fighter", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Monk", "Favored Soul", "Artificer", "Warlock", "Druid", "Alchemist"];
-		populateDropdown(document.getElementById("charClassInput1"), options)
-		//populateDropdown(document.getElementById("charClassInput2"), options)
-		//populateDropdown(document.getElementById("charClassInput3"), options)
+		populateDropdown(document.getElementById("charClassInput1"), options);
+		//populateDropdown(document.getElementById("charClassInput2"), options);
+		//populateDropdown(document.getElementById("charClassInput3"), options);
 	</script>
   
     </body>
