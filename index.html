@@ -25,7 +25,7 @@
 				class2.options[class1_selectedIndex].style.display="initial";
 				class3.options[class1_selectedIndex].style.display="initial";
 			}
-			class1_selectedIndex = class1.selectedIndex; console.log("class1_selectedIndex: " + class1_selectedIndex);
+			class1_selectedIndex = class1.selectedIndex;// console.log("class1_selectedIndex: " + class1_selectedIndex);
 			class2.options[class1_selectedIndex].style.display="none";
 			class3.options[class1_selectedIndex].style.display="none";
 			class2.disabled = false; // can't re-select default value, so after an edit class2 will always be valid
@@ -37,7 +37,7 @@
 			} else {
 				class3.disabled = true;
 			}
-			class2_selectedIndex = class2.selectedIndex; console.log("class2_selectedIndex: " + class2_selectedIndex);
+			class2_selectedIndex = class2.selectedIndex;// console.log("class2_selectedIndex: " + class2_selectedIndex);
 			class3.options[class2_selectedIndex].style.display="none";
 			if(class2_selectedIndex > 0){
 				class3.disabled = false;
@@ -47,7 +47,7 @@
 			}
 		};
 		class3.onchange = function(){
-			class3_selectedIndex = class3.selectedIndex; console.log("class3_selectedIndex: " + class3_selectedIndex);
+			class3_selectedIndex = class3.selectedIndex;// console.log("class3_selectedIndex: " + class3_selectedIndex);
 		};
 		</script>
 	</div>
