@@ -7,9 +7,49 @@
 	<body>
 	
 	<div>
-		<select id="language"><option disabled selected value> -- Class -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
-		<select id="language2"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
-		<select id="language3"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value=Favored Soul>Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		<select id="class1"><option disabled selected value> -- Class -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value="Favored Soul">Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		<select id="class2"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value="Favored Soul">Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		<select id="class3"><option value> -- Multiclass -- </option><option value=Barbarian>Barbarian</option><option value=Bard>Bard</option><option value=Cleric>Cleric</option><option value=Fighter>Fighter</option><option value=Paladin>Paladin</option><option value=Ranger>Ranger</option><option value=Rogue>Rogue</option><option value=Sorcerer>Sorcerer</option><option value=Wizard>Wizard</option><option value=Monk>Monk</option><option value="Favored Soul">Favored Soul</option><option value=Artificer>Artificer</option><option value=Warlock>Warlock</option><option value=Druid>Druid</option><option value=Alchemist>Alchemist</option></select>
+		
+		<script type="text/javascript">
+		var class1 = document.getElementById("class1");
+		var class2 = document.getElementById("class2");
+		var class3 = document.getElementById("class3");
+		class2.disabled = true;
+		class3.disabled = true;
+		var class1_selectedIndex = -1;
+		var class2_selectedIndex = -1;
+		var class3_selectedIndex = -1;
+		class1.onchange = function(){
+			if(class1_selectedIndex > 0){
+				class2.options[class1_selectedIndex].style.display="initial";
+				class3.options[class1_selectedIndex].style.display="initial";
+			}
+			class1_selectedIndex = class1.selectedIndex; console.log("class1_selectedIndex: " + class1_selectedIndex);
+			class2.options[class1_selectedIndex].style.display="none";
+			class3.options[class1_selectedIndex].style.display="none";
+			class2.disabled = false; // can't re-select default value, so after an edit class2 will always be valid
+		};
+		class2.onchange = function(){
+			if(class2_selectedIndex > 0){
+				class3.options[class2_selectedIndex].style.display="initial";
+				class3.disabled = false;
+			} else {
+				class3.disabled = true;
+			}
+			class2_selectedIndex = class2.selectedIndex; console.log("class2_selectedIndex: " + class2_selectedIndex);
+			class3.options[class2_selectedIndex].style.display="none";
+			if(class2_selectedIndex > 0){
+				class3.disabled = false;
+			} else {
+				class3.disabled = true;
+				class3.selectedIndex = 0;
+			}
+		};
+		class3.onchange = function(){
+			class3_selectedIndex = class3.selectedIndex; console.log("class3_selectedIndex: " + class3_selectedIndex);
+		};
+		</script>
 	</div>
 
   
